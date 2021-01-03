@@ -2,3 +2,6 @@
   font-family: sans-serif;
   text-align: center;
 }
+body {
+  background: linear-gradient(to top, #a8ea 0%, #fed6e3 100%);
+}

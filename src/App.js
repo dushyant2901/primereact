@@ -7,7 +7,13 @@ var numbe = {
   "23": "Prime",
   "56": "Not Prime",
   "67": "Prime",
-  "98": "Not Prime"
+  "98": "Not Prime",
+  "19": "Prime",
+  "4": "Not Prime",
+  "53": "Prime",
+  "86": "Not Prime",
+  "61": "Prime",
+  "88": "Not Prime"
 };
 var num = Object.keys(numbe);
 
@@ -27,28 +33,36 @@ export default function App() {
     }
     var newprime = prime;
     if (newprime === true) {
-      var meaning = "yes";
+      var meaning = "This is a Prime Number";
       setmeaning(meaning);
     } else {
       //var meaning = "no";
-      setmeaning("no");
+      setmeaning("This is not a Prime Number");
     }
   }
 
   function knownNumber(numb) {
     setmeaning(numbe[numb]);
-    console.log("clicked", numb);
   }
 
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-      <input onChange={changeHandler}></input>
-      <div>{meaning}</div>
+      
+      <h2 style={{color:"purple",fontWeight:"bold"}}>Prime Number Check</h2>
+      <h3 style={{color:"violet",}}>Type the number here to check</h3>
+      <div> 👇</div>
+      <input style={{color:"orange",borderRadius:"0.5rem",backgroundColor:"beige",margin:"0.7rem",width:"30%",height:"5vh",padding:"0.5rem",fontSize:"1.1rem"}} onChange={changeHandler}></input>
+      <div style={{
+          fontStyle: "italic",
+          fotWeight: "bold",
+          color: "darkgreen",
+          fontSize: "1.2rem",
+          padding: "0.5rem"}}>{meaning}</div>
+       <h3 style={{color:"brown"}}>Random Numbers</h3>
       {num.map(function (numb) {
         return (
-          <span onClick={() => knownNumber(numb)} key={numb}>
+         
+          <span onClick={()=> knownNumber(numb)} style={{color:"navyblue",margin:"1rem",padding:"1rem"}} key={numb} >
             {" "}
             {numb}
           </span>
