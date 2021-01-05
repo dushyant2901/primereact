@@ -47,22 +47,45 @@ export default function App() {
 
   return (
     <div className="App">
-      
-      <h2 style={{color:"purple",fontWeight:"bold"}}>Prime Number Check</h2>
-      <h3 style={{color:"violet",}}>Type the number here to check</h3>
+      <h2 style={{ color: "purple", fontWeight: "bold", fontSize: "1.8rem" }}>
+        Prime Number Check
+      </h2>
+      <h3 style={{ color: "violet", fontFamily: "sans-serif" }}>
+        Type the number here to check
+      </h3>
       <div> 👇</div>
-      <input style={{color:"orange",borderRadius:"0.5rem",backgroundColor:"beige",margin:"0.7rem",width:"30%",height:"5vh",padding:"0.5rem",fontSize:"1.1rem"}} onChange={changeHandler}></input>
-      <div style={{
+      <input
+        style={{
+          color: "orange",
+          borderRadius: "0.5rem",
+          backgroundColor: "beige",
+          margin: "0.7rem",
+          width: "30%",
+          height: "5vh",
+          padding: "0.5rem",
+          fontSize: "1.1rem"
+        }}
+        onChange={changeHandler}
+      ></input>
+      <div
+        style={{
           fontStyle: "italic",
           fotWeight: "bold",
           color: "darkgreen",
           fontSize: "1.2rem",
-          padding: "0.5rem"}}>{meaning}</div>
-       <h3 style={{color:"brown"}}>Random Numbers</h3>
+          padding: "0.5rem"
+        }}
+      >
+        {meaning}
+      </div>
+      <h3 style={{ color: "brown", fontStyle: "italic" }}>Random Numbers</h3>
       {num.map(function (numb) {
         return (
-         
-          <span onClick={()=> knownNumber(numb)} style={{color:"navyblue",margin:"1rem",padding:"1rem"}} key={numb} >
+          <span
+            onClick={() => knownNumber(numb)}
+            style={{ color: "purple", margin: "1rem", padding: "1rem" }}
+            key={numb}
+          >
             {" "}
             {numb}
           </span>
